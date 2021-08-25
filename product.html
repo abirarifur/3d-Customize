@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Customization</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+      <div class="row mt-1">
+        <div class="col-12">
+          <h4 class="text-center herderText"><span>Customize</span> Your <span>3D</span> Product's
+            <span>Style</span>
+          </h4>
+        </div>
+      </div>
+      <div class="main3dDiv">
+        <div class="canvasDiv">
+          <div id="loaderContent">
+            <div class="loader"></div>
+          </div>
+          <canvas id="c"></canvas>
+        </div>
+        <div id="partsContainer">
+          <!-- options changing section -->
+          <div id="options">
+            <div class="colorButton">
+              <div class="colorIcon"></div>
+              Change Color
+            </div>
+            <div class="partsButton">
+              <div class="colorIcon"></div>
+              Change Parts
+            </div>
+          </div>
+  
+          <!-- color changing section -->
+          <div id="changePartContainer">
+            <div id="changePart" class="d-flex">
+            </div>
+            <button class="doneBtn">DONE</button>
+          </div>
+  
+  
+          <!-- color changing section -->
+          <div id="colorsContainer">
+            <div id="partsNameforcolor"></div>
+            <div id="colorByPartsName"></div>
+            <button class="doneBtn">DONE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+  <script src="./BetterOrbitControls.js"></script>
+  <script src="./3dCustom.js"></script>
+  <script>
+    const model = new ThreeModelView
+    this.colorChoise = ThreeModelView.colorChoise
+
+  </script>
+</body>
+</html>

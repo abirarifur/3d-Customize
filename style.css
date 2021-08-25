@@ -1,0 +1,289 @@
+body, html{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+#partsContainer{
+  display: flex;
+  flex-flow: column;
+  width: 20%;
+  padding: 1%;
+  transition: 0.3s;
+  background: aliceblue;
+  box-shadow: 0 0 5px gray;
+  z-index: 100;
+}
+.partsOfModel{
+  /* // background: url('/assets/images/parts/bottom_1.png')no-repeat; */
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 150px;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  background-position: center;
+  margin: 10px;
+  box-shadow: 0 0 20px 0 gray;
+}
+.partsOfModel:hover{
+    box-shadow: 0 0 5px 0 gray;
+    cursor: pointer;
+}
+.colorChangeParts{
+  width: 100px;
+    height: 100px;
+    box-shadow: 0 0 20px grey;
+    align-self: center;
+    margin: 10px;
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.colorChangeParts:hover{
+    box-shadow: 0 0 5px 0 gray;
+    cursor: pointer;
+}
+
+
+#primeDiv {
+  display: flex;
+}
+
+.main3dDiv {
+  display: flex;
+  /* justify-content: center;
+align-items: center; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: visible;
+}
+
+.canvasDiv {
+  position: relative;
+  width: 80%;
+  height: 100%;
+}
+
+#colors {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.closeButton {
+  background-color: #161616;
+  padding: 5%;
+  border: none;
+  width: 100%;
+  /* border-radius: 50px; */
+  margin: 1px;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+
+#colorswapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colorPicker {
+  /* padding: 15%; */
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 10px gray;
+  transition: 0.2s all;
+}
+.colorPicker:hover{
+    /* box-shadow: 0 0 5px 0 gray; */
+    width: 60px !important;
+    height: 60px !important;
+    cursor: pointer;
+}
+
+.imageFit {
+  object-fit: none;
+}
+
+#parts {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+}
+
+.partsDetails {
+  width: 100%;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin: 10px 0;
+  background-position: center;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+
+button:focus {outline:0;}
+#loaderContent{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 11111;
+}
+.loader {
+
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.herderText{
+    font-family: monospace;
+    text-align: center;
+    font-size: 25px;
+  }
+  #options {
+    transition: all 0.3s;
+    }
+    #options .colorButton .colorIcon{
+        background: url('./assets/images/parts/fillcolor.png');
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+    #options .colorButton{
+        background-color: #677ef7;
+        padding: 5px;
+        color: #eaeaea;
+        width: 100%;
+        font-size: 1.2vw;
+        font-weight: 800;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 0 0 10px gray;
+    }
+    #options .colorButton:hover{
+        box-shadow: 0 10px 20px gray;
+        cursor: pointer;
+    }
+    .partsButton{
+      background-color: #2d409e;
+      padding: 5px;
+      color: #eaeaea;
+      width: 100%;
+      font-size: 1.2vw;
+      font-weight: 800;
+      border-radius: 30px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 0 10px gray;
+      margin-top: 30px;
+    }
+    .partsButton:hover{
+        box-shadow: 0 10px 20px gray;
+        cursor: pointer;
+      }
+  
+      .partsButton .colorIcon{
+        background: url('./assets/images/parts/portraits.png');
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+  
+  #changePartContainer{
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    transition: all 0.3s;
+  }
+  #colorsContainer{
+    display: none;
+    flex-direction: column;
+    transition: all 0.3s;
+    overflow: hidden;
+    flex-grow: 1;
+    width: 100%;
+  }
+  #changePart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  #colorByPartsName{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  #colorByPartsName .colordetails{
+      display: flex;
+      width: 75px;
+      height: 75px;
+      justify-content: center;
+      align-items: center;
+  }
+  #partsNameforcolor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+  .doneBtn{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #2d409e;
+    color: #f9f9f9;
+    border: none;
+
+  }
+  .doneBtn:hover{
+    background-color: #2b465f;
+    cursor: pointer;
+  }
+  #c {
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  
